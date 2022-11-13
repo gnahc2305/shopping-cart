@@ -1,17 +1,33 @@
-function Shop() {
-    return (
-      <div>
-        <div className="shop">
-          <h1>Shop</h1>
+import React, { useState } from "react";
+import Card from "./Card";
 
-          <div className="shop-container">
-            <div className="card">
-            </div>
-          </div>
+function Shop() {
+  const [cart, setCart] = useState(0);
+
+  function addItem(e) {
+    setCart(cart + 1);
+  }
+
+  return (
+    <div>
+      <div className="shop">
+
+        <div className="cart-counter">
+          <h1>Shop</h1>
+          <button onClick={addItem}>Cart: {cart}</button>
+        </div>
+
+        <div className="shop-container">
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
         </div>
       </div>
-    );
-  }
-  
-  export default Shop;
-  
+    </div>
+  );
+}
+
+export default Shop;

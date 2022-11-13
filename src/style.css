@@ -24,13 +24,60 @@ nav {
     text-align: center;
 }
 
-.shop {
+.cart-counter {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
     text-align: center;
+    /* position: sticky; */
+}
+
+.cart-counter button {
+    font-size: 30px;
+    /* margin-right: 100px; */
+    /* position: fixed; */
 }
 
 .shop-container {
-    background-color: blueviolet;
-    height: 500px;
+    margin-top: 20px;
+    /* background-color: blueviolet; */
+    height: 700px;
     width: 100%;
     display: grid;
+    gap: 10px;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-rows: 1fr 1fr; */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* grid-template-rows: repeat(auto-fit, 100px); */
 }
+
+.img {
+    height: 60%;
+    width: 100%;
+    background-color: grey;
+    text-align: center;
+    font-size: 30px;
+}
+
+.card {
+    height: 300px;
+    width: 250px;
+    background-color: brown;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.card input {
+    width: 15%;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.card button {
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+
+
