@@ -19,3 +19,18 @@ nav {
     align-items: center;
     list-style: none;
 }
+
+.home-container {
+    text-align: center;
+}
+
+.shop {
+    text-align: center;
+}
+
+.shop-container {
+    background-color: blueviolet;
+    height: 500px;
+    width: 100%;
+    display: grid;
+}
