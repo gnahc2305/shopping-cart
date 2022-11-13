@@ -1,12 +1,18 @@
+import React, { useState } from "react";
 
+export default function Card({ addItem }) {
+  const [inputValue, setInputValue] = useState(1);
 
-export default function Card() {
-    return (
-        <div className="card">
-            <div className="img">PRODUCT</div>
+  function changeValue(e) {
+    setInputValue(parseInt(e.target.value));
+  }
 
-            <input type="number" placeholder="0"></input>
-            <button>Add to cart</button>
-        </div>
-    )
+  return (
+    <div className="card">
+      <div className="img">PRODUCT</div>
+
+      <input type="number" placeholder="1" onChange={changeValue}></input>
+      <button onClick={event => addItem(inputValue)}>Add to cart</button>
+    </div>
+  );
 }

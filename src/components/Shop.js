@@ -4,8 +4,8 @@ import Card from "./Card";
 function Shop() {
   const [cart, setCart] = useState(0);
 
-  function addItem(e) {
-    setCart(cart + 1);
+  function addItem(value) {
+    setCart(cart + value);
   }
 
   return (
@@ -14,16 +14,16 @@ function Shop() {
 
         <div className="cart-counter">
           <h1>Shop</h1>
-          <button onClick={addItem}>Cart: {cart}</button>
+          <button>Cart: {cart}</button>
         </div>
 
         <div className="shop-container">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            <Card addItem={addItem} />
+            <Card addItem={addItem} />
+            <Card addItem={addItem} />
+            <Card addItem={addItem} />
+            <Card addItem={addItem} />
+            <Card addItem={addItem} />
         </div>
       </div>
     </div>
